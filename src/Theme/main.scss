@@ -1,0 +1,37 @@
+@import './variables';
+
+:root {
+  --rmd-theme-color-black: #{$colorBlack};
+  --rmd-theme-color-white: #{$colorWhite};
+  --rmd-theme-color-primary: #{$colorPrimary};
+  --rmd-theme-color-primary-dark: #{$colorPrimaryDark};
+  --rmd-theme-color-secondary: #{$colorSecondary};
+  --rmd-theme-color-secondary-dark: #{$colorSecondaryDark};
+  --rmd-theme-color-error: #{$colorError};
+  --rmd-theme-color-surface: #{$colorSurface};
+  --rmd-theme-color-background: #{$colorBackground};
+
+  --rmd-theme-font-size: #{$fontSize};
+  --rmd-theme-font-weight-lighter: #{$fontWeightLighter};
+  --rmd-theme-font-weight-normal: #{$fontWeightNormal};
+  --rmd-theme-font-weight-medium: #{$fontWeightMedium};
+  --rmd-theme-font-family-headline: #{$fontFamilyHeadline};
+  --rmd-theme-font-family-subtitle: #{$fontFamilySubtitle};
+  --rmd-theme-font-family-overline: #{$fontFamilyOverline};
+  --rmd-theme-font-family-caption: #{$fontFamilyCaption};
+  --rmd-theme-font-family-button: #{$fontFamilyButton};
+  --rmd-theme-font-family-body: #{$fontFamilyBody};
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $fontFamilyBody;
+  font-size: $fontSize;
+  line-height: 24px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}

@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,500&display=swap');
+
+$colorBlack: '#000';
+$colorWhite: '#fff';
+$colorPrimary: '#6200ee';
+$colorPrimaryDark: '#3700b3';
+$colorSecondary: '#03dac6';
+$colorSecondaryDark: '#03dac6';
+$colorError: '#b00020';
+$colorSurface: '#fff';
+$colorBackground: '#fff';
+
+$fontSize: 16px;
+$fontWeightLighter: 100;
+$fontWeightNormal: 400;
+$fontWeightMedium: 500;
+$fontFamilyHeadline: 'Roboto', sans-serif;
+$fontFamilySubtitle: $fontFamilyHeadline;
+$fontFamilyOverline: $fontFamilyHeadline;
+$fontFamilyCaption: $fontFamilyHeadline;
+$fontFamilyButton: $fontFamilyHeadline;
+$fontFamilyBody: $fontFamilyHeadline;
