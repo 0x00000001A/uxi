@@ -1,0 +1,18 @@
+$rmdGridColumns: 12;
+$rmdGridPadding: 24px;
+
+.rmd-grid {
+  padding: $rmdGridPadding;
+
+  &__row {
+    display: grid;
+    grid-gap: $rmdGridPadding;
+    grid-template-columns: repeat($rmdGridColumns, minmax(0, 1fr));
+  }
+
+  @for $column from 1 through $rmdGridColumns {
+    &__column-#{$column} {
+      grid-column-end: span $column;
+    }
+  }
+}

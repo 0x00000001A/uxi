@@ -1,19 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import clsx from 'clsx'
-import './styles.scss'
+import { uxiBuildClassName, withoutComponentProps } from '../helpers'
+
 import UxiRipple from '../Ripple'
-
-const withoutComponentProps = (originalProps, propsToRemove) => {
-  const newProps = Object.assign({}, originalProps)
-
-  propsToRemove.forEach((propName) => {
-    delete newProps[propName]
-  })
-
-  return newProps
-}
+import './styles.scss'
 
 export const config = {
   className: 'uxi-surface',
@@ -22,21 +13,12 @@ export const config = {
   )
 }
 
-export const uxiBuildClassName = (definition) => {
-  return clsx([
-    definition.base,
-    definition.modifiers.map(({ name, value = '', condition = true }) => {
-      return condition && `${definition.base}_${[name, value].filter(Boolean).join('-')}`
-    })
-  ])
-}
-
 const UxiSurface = (props) => {
   const className = uxiBuildClassName({
     base: config.className,
     modifiers: [{
       name: 'elevation',
-      value: props.elevation,
+      postfix: props.elevation,
       condition: props.elevation
     }, {
       name: 'action',
